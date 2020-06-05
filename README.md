@@ -23,8 +23,6 @@ Para uso de @media:
 
 ## Layout
 
-Grid layout desktop a mobile con Flexbox
-
 Para el uso definir `grid` como contenedor, tener en cuenta `# de columns = 12`
 
 Y para dividir en columnas considerar :
