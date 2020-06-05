@@ -1,0 +1,20 @@
+.box-row {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(71, 117, 52);
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+
+  @include screen(md) {
+    background-color: rgb(165, 71, 92);
+  }
+
+  @include screen(sm) {
+    background-color: rgb(212, 164, 32);
+  }
+
+  @include screen(xs) {
+    background-color: rgb(143, 115, 207);
+  }
+}

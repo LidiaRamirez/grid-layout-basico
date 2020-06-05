@@ -1,0 +1,32 @@
+$gutter: 8px;
+
+.grid {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* &-gutter {
+    margin: 0 ($gutter * -1);
+    & > [class^="col"] {
+      padding: 0 $gutter;
+    }
+  } */
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex-basis: (100% / 12) * $i;
+    width: (100% / 12) * $i;
+  }
+}
+
+@each $key, $value in $breakpoints {
+  @include screen(#{$key}) {
+    @for $i from 1 through 12 {
+      .col-#{$key}-#{$i} {
+        flex-basis: (100% / 12) * $i;
+        width: (100% / 12) * $i;
+      }
+    }
+  }
+}
